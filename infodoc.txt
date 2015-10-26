@@ -1,0 +1,374 @@
+SQL> 
+SQL> -- Minh Le
+SQL> -- CSULB ID: 010957646
+SQL> -- IS 380
+SQL> -- Final project document
+SQL> -- email: Minh.Le01@student.csulb.edu
+SQL> -- Phone (714) 452 - 4393
+SQL> 
+SQL> -- table RA structure
+SQL> describe RA;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ RA#                                       NOT NULL NUMBER(10)
+ RADATEOPEN                                         DATE
+ RADATECLOSE                                        DATE
+ CUST_NUM                                           VARCHAR2(10)
+ PROD_NUM                                           VARCHAR2(10)
+ CODE_NUM                                           VARCHAR2(10)
+ UNITPRICE                                          NUMBER(10,2)
+ REQUESTQTY                                         NUMBER(10)
+ REQUESTAMT_$                                       NUMBER(10,2)
+ ACTRETURNQTY                                       NUMBER(10)
+ ACTRETURNAMT_$                                     NUMBER(10,2)
+ RA_STATUS                                          VARCHAR2(10)
+
+SQL> 
+SQL> -- table Code structure
+SQL> describe Code;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CODE_NUM                                  NOT NULL VARCHAR2(3)
+ C_DISCRIPTION                                      VARCHAR2(30)
+
+SQL> 
+SQL> -- table Product structure
+SQL> describe Product;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROD_NUM                                  NOT NULL VARCHAR2(10)
+ PNAME                                              VARCHAR2(10)
+ UNITPRICE                                          NUMBER(10,2)
+
+SQL> 
+SQL> -- table Customer structure
+SQL> describe Customer;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CUST_NUM                                  NOT NULL VARCHAR2(10)
+ FIRSTNAME                                          VARCHAR2(20)
+ LASTNAME                                           VARCHAR2(20)
+ ADDRESS#                                           VARCHAR2(100)
+ CITY                                               VARCHAR2(20)
+ STATENAME                                          VARCHAR2(2)
+ ZIPCODE                                            NUMBER(10)
+ PHONE                                              VARCHAR2(10)
+
+SQL> 
+SQL> -- table Counter structure
+SQL> describe table Counter;
+Usage: DESCRIBE [schema.]object[@db_link]
+SQL> 
+SQL> -- test data Customer table
+SQL> column Cust_num format 9999
+SQL> column Firstname format a10
+SQL> column Lastname format a10
+SQL> column Address# format a20
+SQL> column City format a15
+SQL> column StateName format a3
+SQL> column Zipcode format 99999
+SQL> column Phone format a11
+SQL> select * from Customer;
+
+Customer                                                                        
+Number     FIRSTNAME  LASTNAME   ADDRESS#             CITY            STA       
+---------- ---------- ---------- -------------------- --------------- ---       
+ZIPCODE PHONE                                                                   
+------- -----------                                                             
+101        Andy       Drew       123 Andy Street      Long Beach      CA        
+  90815 7144566787                                                              
+                                                                                
+102        Betty      Tran       234 Betty Street     Westminster     CA        
+  92834 7142563956                                                              
+                                                                                
+103        Cindy      Lee        321 Cindy Street     Fountain Valley CA        
+  90817 5623658564                                                              
+
+Customer                                                                        
+Number     FIRSTNAME  LASTNAME   ADDRESS#             CITY            STA       
+---------- ---------- ---------- -------------------- --------------- ---       
+ZIPCODE PHONE                                                                   
+------- -----------                                                             
+                                                                                
+104        David      Nguyen     741 David Street     Cerritos        CA        
+  90818 3032563254                                                              
+                                                                                
+105        Ellen      Hoang      123 Ellen Street     Lakewood        CA        
+  90820 5623568456                                                              
+                                                                                
+106        Fiona      Ngo        123 Fiona Street     San Pedro       CA        
+
+Customer                                                                        
+Number     FIRSTNAME  LASTNAME   ADDRESS#             CITY            STA       
+---------- ---------- ---------- -------------------- --------------- ---       
+ZIPCODE PHONE                                                                   
+------- -----------                                                             
+  91187 5621450239                                                              
+                                                                                
+107        George     Nguyen     123 George Street    Garden Grove    CA        
+  97672 7145203690                                                              
+                                                                                
+SQL> 
+SQL> -- test data Product table
+SQL> column Prod_num heading 'Prod|Num' format a5
+SQL> column Pname heading 'Product|Description' format a14
+SQL> column UnitPrice format $9999.99
+SQL> select * from Product;
+
+Prod  Product             Unit                                                  
+Num   Description        Price                                                  
+----- -------------- ---------                                                  
+P1    Pencil 1           $1.00                                                  
+P2    Pencil 2           $2.00                                                  
+P3    Pencil 3           $3.00                                                  
+P4    Pencil 4           $4.00                                                  
+P5    Pencil 5           $5.00                                                  
+P6    Pencil 6           $6.00                                                  
+SQL> 
+SQL> --test data Reason Code table
+SQL> column Code_num heading 'Reason|Code' format a4
+SQL> column C_discription heading 'Reason|Description' format a23
+SQL> select * from Code;
+
+Reas Reason                                                                     
+Code Description                                                                
+---- -----------------------                                                    
+C1   Defective                                                                  
+C2   Dislike Styling                                                            
+C3   Dislike Color                                                              
+C4   Expected Better Quality                                                    
+C5   Changed Mind                                                               
+C6   Not As Described                                                           
+C7   Not As Expected                                                            
+C8   Wrong Item Shipped                                                         
+C9   Recieved Damaged                                                           
+C10  Canceled Order                                                             
+SQL> 
+SQL> -- test data RA table
+SQL> column RA# heading 'RA|Number' format 99999
+SQL> column DateOpen heading 'Date|Open' format a10
+SQL> column DateClose heading 'Date|Close' format a10
+SQL> column Cust_num heading 'Customer|Number' format a8
+SQL> column Prod_num heading 'Prod|Num' format a5
+SQL> column Code_num heading 'Reason|Code' format a6
+SQL> column UnitPrice heading 'Unit|Price' format 9999.99
+SQL> column RequestQty heading 'Request|Qty' format 9999
+SQL> column RequestAmt_$ heading 'Request|Amount' format 9999.99
+SQL> column ActReturnQty heading 'Actual|QtyReturn' format 9999
+SQL> column ActReturnAmt_$ heading 'Actual|AmtReturn' format 9999.99
+SQL> column RA_Status heading 'RA|Status' format a6
+SQL> select RA#, to_char(RAdateOpen, 'mm/dd/yyyy') DateOpen, to_char(RAdateClose, 'mm/dd/yyyy') DateClose, Cust_num, Prod_num, Code_num, UnitPrice, RequestQty, RequestAmt_$, ActReturnQty, ActReturnAmt_$, RA_Status
+  2  from RA;
+
+    RA Date       Date       Customer Prod  Reason     Unit Request  Request    
+Number Open       Close      Number   Num   Code      Price     Qty   Amount    
+------ ---------- ---------- -------- ----- ------ -------- ------- --------    
+   Actual    Actual RA                                                          
+QtyReturn AmtReturn Status                                                      
+--------- --------- ------                                                      
+  1000 11/25/2014            101      P1    C4         1.00       3     3.00    
+                    Open                                                        
+                                                                                
+  1001 11/25/2014 12/02/2014 101      P2    C4         2.00       4     8.00    
+        4      8.00 Closed                                                      
+                                                                                
+  1002 11/25/2014            102      P1    C4         1.00       4     4.00    
+
+    RA Date       Date       Customer Prod  Reason     Unit Request  Request    
+Number Open       Close      Number   Num   Code      Price     Qty   Amount    
+------ ---------- ---------- -------- ----- ------ -------- ------- --------    
+   Actual    Actual RA                                                          
+QtyReturn AmtReturn Status                                                      
+--------- --------- ------                                                      
+                    Open                                                        
+                                                                                
+  1003 11/25/2014            101      P3    C4         3.00       4    12.00    
+                    Open                                                        
+                                                                                
+  1004 11/25/2014 12/01/2014 103      P5    C6         5.00       4    20.00    
+        4     20.00 Closed                                                      
+
+    RA Date       Date       Customer Prod  Reason     Unit Request  Request    
+Number Open       Close      Number   Num   Code      Price     Qty   Amount    
+------ ---------- ---------- -------- ----- ------ -------- ------- --------    
+   Actual    Actual RA                                                          
+QtyReturn AmtReturn Status                                                      
+--------- --------- ------                                                      
+                                                                                
+  1005 11/30/2014 12/01/2014 101      P3    C4         3.00       3     9.00    
+        3      9.00 Closed                                                      
+                                                                                
+  1006 11/30/2014 12/01/2014 103      P4    C10        4.00       3    12.00    
+        3     12.00 Closed                                                      
+                                                                                
+
+    RA Date       Date       Customer Prod  Reason     Unit Request  Request    
+Number Open       Close      Number   Num   Code      Price     Qty   Amount    
+------ ---------- ---------- -------- ----- ------ -------- ------- --------    
+   Actual    Actual RA                                                          
+QtyReturn AmtReturn Status                                                      
+--------- --------- ------                                                      
+  1007 11/30/2014            104      P3    C2         3.00       4    12.00    
+                    Open                                                        
+                                                                                
+  1008 11/30/2014 12/01/2014 106      P5    C4         5.00       4    20.00    
+        3     15.00 Closed                                                      
+                                                                                
+  1009 11/30/2014            104      P3    C4         3.00       3     9.00    
+
+    RA Date       Date       Customer Prod  Reason     Unit Request  Request    
+Number Open       Close      Number   Num   Code      Price     Qty   Amount    
+------ ---------- ---------- -------- ----- ------ -------- ------- --------    
+   Actual    Actual RA                                                          
+QtyReturn AmtReturn Status                                                      
+--------- --------- ------                                                      
+                    Open                                                        
+                                                                                
+  1010 11/30/2014            107      P4    C3         4.00       3    12.00    
+                    Open                                                        
+                                                                                
+  1011 12/01/2014 12/10/2014 106      P5    C6         5.00       4    20.00    
+        4     20.00 Closed                                                      
+
+    RA Date       Date       Customer Prod  Reason     Unit Request  Request    
+Number Open       Close      Number   Num   Code      Price     Qty   Amount    
+------ ---------- ---------- -------- ----- ------ -------- ------- --------    
+   Actual    Actual RA                                                          
+QtyReturn AmtReturn Status                                                      
+--------- --------- ------                                                      
+                                                                                
+  1012 12/01/2014 12/01/2014 107      P5    C9         5.00       4    20.00    
+        3     15.00 Closed                                                      
+                                                                                
+  1013 12/01/2014            101      P3    C10        3.00       3     9.00    
+                    Open                                                        
+                                                                                
+
+    RA Date       Date       Customer Prod  Reason     Unit Request  Request    
+Number Open       Close      Number   Num   Code      Price     Qty   Amount    
+------ ---------- ---------- -------- ----- ------ -------- ------- --------    
+   Actual    Actual RA                                                          
+QtyReturn AmtReturn Status                                                      
+--------- --------- ------                                                      
+  1014 12/01/2014            102      P5    C9         5.00       3    15.00    
+                    Open                                                        
+                                                                                
+  1015 12/01/2014 12/10/2014 106      P6    C10        6.00       5    30.00    
+        4     24.00 Closed                                                      
+                                                                                
+  1016 12/02/2014            107      P3    C9         3.00       3     9.00    
+
+    RA Date       Date       Customer Prod  Reason     Unit Request  Request    
+Number Open       Close      Number   Num   Code      Price     Qty   Amount    
+------ ---------- ---------- -------- ----- ------ -------- ------- --------    
+   Actual    Actual RA                                                          
+QtyReturn AmtReturn Status                                                      
+--------- --------- ------                                                      
+                    Open                                                        
+                                                                                
+  1018 12/02/2014 12/15/2014 105      P3    C8         3.00       5    15.00    
+        4     12.00 Closed                                                      
+                                                                                
+  1019 12/02/2014            104      P4    C2         4.00       3    12.00    
+                    Open                                                        
+
+    RA Date       Date       Customer Prod  Reason     Unit Request  Request    
+Number Open       Close      Number   Num   Code      Price     Qty   Amount    
+------ ---------- ---------- -------- ----- ------ -------- ------- --------    
+   Actual    Actual RA                                                          
+QtyReturn AmtReturn Status                                                      
+--------- --------- ------                                                      
+                                                                                
+  1020 12/02/2014            103      P3    C10        3.00       3     9.00    
+                    Open                                                        
+                                                                                
+  1021 12/02/2014            104      P3    C8         3.00       3     9.00    
+                    Open                                                        
+                                                                                
+
+    RA Date       Date       Customer Prod  Reason     Unit Request  Request    
+Number Open       Close      Number   Num   Code      Price     Qty   Amount    
+------ ---------- ---------- -------- ----- ------ -------- ------- --------    
+   Actual    Actual RA                                                          
+QtyReturn AmtReturn Status                                                      
+--------- --------- ------                                                      
+  1022 12/02/2014            102      P4    C9         4.00       3    12.00    
+                    Open                                                        
+                                                                                
+  1023 12/10/2014 12/10/2014 103      P3    C8         3.00      10    30.00    
+        9     27.00 Closed                                                      
+                                                                                
+  1024 12/15/2014            106      P4    C10        4.00       4    16.00    
+
+    RA Date       Date       Customer Prod  Reason     Unit Request  Request    
+Number Open       Close      Number   Num   Code      Price     Qty   Amount    
+------ ---------- ---------- -------- ----- ------ -------- ------- --------    
+   Actual    Actual RA                                                          
+QtyReturn AmtReturn Status                                                      
+--------- --------- ------                                                      
+                    Open                                                        
+                                                                                
+  1025 12/15/2014            103      P3    C5         3.00       3     9.00    
+                    Open                                                        
+                                                                                
+  1026 12/15/2014            102      P3    C9         3.00       4    12.00    
+                    Open                                                        
+
+    RA Date       Date       Customer Prod  Reason     Unit Request  Request    
+Number Open       Close      Number   Num   Code      Price     Qty   Amount    
+------ ---------- ---------- -------- ----- ------ -------- ------- --------    
+   Actual    Actual RA                                                          
+QtyReturn AmtReturn Status                                                      
+--------- --------- ------                                                      
+                                                                                
+  1027 12/15/2014            106      P3    C8         3.00       3     9.00    
+                    Open                                                        
+                                                                                
+  1028 12/15/2014            102      P3    C4         3.00       3     9.00    
+                    Open                                                        
+                                                                                
+
+    RA Date       Date       Customer Prod  Reason     Unit Request  Request    
+Number Open       Close      Number   Num   Code      Price     Qty   Amount    
+------ ---------- ---------- -------- ----- ------ -------- ------- --------    
+   Actual    Actual RA                                                          
+QtyReturn AmtReturn Status                                                      
+--------- --------- ------                                                      
+  1029 12/15/2014            103      P5    C6         5.00       5    25.00    
+                    Open                                                        
+                                                                                
+  1030 12/15/2014 12/15/2014 101      P2    C4         2.00       3     6.00    
+        3      6.00 Closed                                                      
+                                                                                
+  1031 12/15/2014 12/15/2014 101      P3    C6         3.00       3     9.00    
+
+    RA Date       Date       Customer Prod  Reason     Unit Request  Request    
+Number Open       Close      Number   Num   Code      Price     Qty   Amount    
+------ ---------- ---------- -------- ----- ------ -------- ------- --------    
+   Actual    Actual RA                                                          
+QtyReturn AmtReturn Status                                                      
+--------- --------- ------                                                      
+        3      9.00 Closed                                                      
+                                                                                
+  1032 12/15/2014            104      P4    C7         4.00       3    12.00    
+                    Open                                                        
+                                                                                
+  1033 12/15/2014 12/15/2014 106      P1    C4         1.00      10    10.00    
+        9      9.00 Closed                                                      
+
+    RA Date       Date       Customer Prod  Reason     Unit Request  Request    
+Number Open       Close      Number   Num   Code      Price     Qty   Amount    
+------ ---------- ---------- -------- ----- ------ -------- ------- --------    
+   Actual    Actual RA                                                          
+QtyReturn AmtReturn Status                                                      
+--------- --------- ------                                                      
+                                                                                
+  1034 12/15/2014            105      P5    C10        5.00      10    50.00    
+                    Open                                                        
+                                                                                
+  1035 12/15/2014            103      P2    C9         2.00      20    40.00    
+                    Open                                                        
+                                                                                
+SQL> 
+SQL> 
+SQL> spool off
