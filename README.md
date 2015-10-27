@@ -54,3 +54,19 @@
 	Mail to: 1213 Warehouse Road<br>
 	Gainesville, FL 13802
 </p>
+
+<p>
+	Note 1: Since the unit price may change over time, you need to store the unit price and amount credited information under each RA.
+	Note 2: At this moment, we trust the users to enter a valid reason code.
+	Note 3: To simplify the matter, the customer can only return one product at a time.
+	Note 4: The screen shots format are for your reference -- you do not need to count spaces or line spaces to match the screen shots, but you do need to display all information found on the screen shots with a similar appearance.
+</p>
+
+<h1>Program 2 - CloseRA.sql</h1>
+<p>
+	The RA information is transmitted to the warehouse and the warehouse waits for the return to come in. The warehouse notifies us when the actual return is received. 
+	The user runs the CloseRA program to update this information to the system.
+	The system would first ask the user to enter the RA number, and displays all details of that return. The system then asks how many units have been received. 
+	The system updates the RA close date, quantity received, amount credited, and set the RA status to ‘C’losed.
+	Here is the sample screen shot:
+</p>
