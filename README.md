@@ -134,17 +134,30 @@
 	The manager wants to know, how many RAs have been Opened for x number of days and have not been closed (this is typically called the “aging” report).
 	Here is a sample of the report. Please sort your report by the longest DaysOpen first.
 </p>
-<p>
-	SQL> start a:aging<br>
-	****** OPEN RA AGING Report ******<br>
-	Today’s Date: 10/28/2014<br>
-	Please enter number of days to query: 30<br>
-	RA RA Date Prod Product Request Unit Request Days<br>
-	Number Status Open Num Description Qty Price Amount Open<br>
-	------ ----- --------- ---- ----------- ------- ----- ---------- ------<br>
-	1008 O 4/11/2014 P1 Pencil 42 2.00 84.00 205<br>
-	1010 O 7/28/2014 P5 Eraser 15 3.00 45.00 92<br>
-</p>
+<table>
+	<tr>
+		<th>RA <br> Number</th>
+		<th>RA <br> Status</th>
+		<th>Date <br> Open</th>
+		<th>Prod <br> Num</th>
+		<th>Product <br> Description</th>
+		<th>Request <br> Qty</th>
+		<th>Unit <br> Price</th>
+		<th>Request <br> Amount</th>
+		<th>Days <br> Open</th>
+	</tr>
+	<tr>
+		<td>1008</td>
+		<td>0</td>
+		<td>4/11/2014</td>
+		<td>P1</td>
+		<td>Pencil</td>
+		<td>42</td>
+		<td>2.00</td>
+		<td>84.00</td>
+		<td>205</td>
+	</tr>
+</table>
 
 <h1 align="center">Program 5 - ByReason.sql</h1>
 <p>
