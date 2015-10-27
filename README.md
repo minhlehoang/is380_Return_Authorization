@@ -139,8 +139,8 @@ SQL> start a:aging<br>
 ****** OPEN RA AGING Report ******<br>
 Today’s Date: 10/28/2014<br>
 Please enter number of days to query: 30<br>
-RA RA Date Prod Product Request Unit Request Days<br>
-Number Status Open Num Description Qty Price Amount Open<br>
+ RA      RA   Date   Prod    Product     Request   Unit   Request    Days<br>
+Number Status Open   Num   Description     Qty     Price   Amount   Open<br>
 -----------------------------------------------------------<br>
 1008 O 4/11/2014 P1 Pencil 42 2.00 84.00 205<br>
 1010 O 7/28/2014 P5 Eraser 15 3.00 45.00 92
