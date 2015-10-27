@@ -142,3 +142,15 @@
 	Please note that, even the customers never mail in the products, by calling our Operations department, it indicates unsatisfaction of our products. 
 	So this query should look at ALL return authorizations regardless of status. Here is a sample report:
 </p>
+<p>
+	SQL> start a:byReason<br>
+	****** Return Product BY REASON Report ******<br>
+	Prod Product Reason Reason No of Total Total<br>
+	Num Description Code Description Returns Qty Amount<br>
+	------------------------------------------------------------------<br>
+	P1 Pencil 1 Unsatisfied quality 25 1,220 $2,440.00<br>
+	P1 Pencil 2 Defective product 3 10 $ 20.00<br>
+	...<br>
+	P2 Pen 1 Unsatisfied quality 1 3 $ 4.50<br>
+	P2 Pen 5 Arrive too late 1 500 $ 750.00<br>
+</p>
