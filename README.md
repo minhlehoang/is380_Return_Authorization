@@ -145,8 +145,8 @@
 <p>
 	SQL> start a:byReason<br>
 	****** Return Product BY REASON Report ******<br>
-	Prod &nbsp&nbsp Product Reason Reason No of Total Total<br>
-	Num &nbsp&nbsp Description Code Description Returns Qty Amount<br>
+	Prod &nbsp&nbsp Product &nbsp&nbsp Reason &nbsp&nbsp Reason &nbsp&nbspNo of &nbsp&nbspTotal &nbsp&nbspTotal<br>
+	Num &nbsp&nbsp Description &nbsp&nbsp Code &nbsp&nbsp Description &nbsp&nbspReturns &nbsp&nbspQty &nbsp&nbspAmount<br>
 	------------------------------------------------------------------<br>
 	P1 Pencil 1 Unsatisfied quality 25 1,220 $2,440.00<br>
 	P1 Pencil 2 Defective product 3 10 $ 20.00<br>
