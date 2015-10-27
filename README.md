@@ -1,5 +1,10 @@
-# is380_Return_Authorization
-Database Management
+<h1 align="center">IS 380 Final Project</h1>
+<h3 align= "center">Database Management</h3>
+
+<h4 align="center">CALIFORNIA STATE UNIVERSITY, LONG BEACH</h4>
+<h4 align="center">IS 380 – Database Management</h4>
+<h4 align="center">Fall 2014 Term – Session 1</h4>
+
 <h1>Project Description</h1>
 <p>
 	Things ‘n Things is an online company that sells hundreds of various products on its e-Commerce store, each product has a product number, description, and unit price.
