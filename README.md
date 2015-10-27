@@ -5,7 +5,7 @@
 <h4 align="center">IS 380 – Database Management</h4>
 <h4 align="center">Fall 2014 Term – Session 1</h4>
 
-<h1>Project Description</h1>
+<h1 align="center">Project Description</h1>
 <p>
 	Things ‘n Things is an online company that sells hundreds of various products on its e-Commerce store, each product has a product number, description, and unit price.
 	When customers are unsatisfied with their products, they return the products to Things ‘n Things, and Things ‘n Things issues credit to the customer. Each customer has a customer number and profile (such as name, address, etc.). 
