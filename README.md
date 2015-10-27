@@ -23,3 +23,32 @@
 	At this point, the system updates these data to the database, and assigned a unique RA Number to this return. The return status is ‘O’pen. The RA number and status is displayed for the user. A sample screen is as follows. 
 	The bold underlined text indicates user input; everything else is displayed automatically.
 </p>
+SQL> start a:OpenRA.sql
+****** OPEN a Return Authorization ******
+Today's Date: 22-MAR-2014
+Enter Customer Number: 102
+Customer Name: Jones, Elaine
+Shipping Address: 123 Main Street
+City, State Zip: Los Angeles, CA 91001
+Phone: (323) 511-1199
+Enter Product Number: P1
+Prod Number: P1
+Prod Description: Pencil
+Unit Price: $2.00
+Enter the return quantity: 20
+Amount returned: $40.00
+Please choose from the following reason code:
+Reason Reason
+Code Description
+------- --------------------------
+1 Unsatisfied quality
+2 Defective product
+3 Cannot assemble
+4 Different from description
+5 Arrive too late
+Enter the reason code: 1
+***** Return Authorization --> 1001 is now Open
+***** Please print the return label. Thank you! *****
+Return Authorization Number: 1001
+Mail to: 1213 Warehouse Road
+Gainesville, FL 13802
