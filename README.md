@@ -134,3 +134,11 @@
 	The manager wants to know, how many RAs have been Opened for x number of days and have not been closed (this is typically called the “aging” report).
 	Here is a sample of the report. Please sort your report by the longest DaysOpen first.
 </p>
+
+<h1>Program 5 - ByReason.sql</h1>
+<p>
+	The management wants to know, for each product, what are the reasons for return.
+	By running the ByReason program, the manager can see for each product, each reason, the number of return authorization, total request quantity and total request amount of returns. 
+	Please note that, even the customers never mail in the products, by calling our Operations department, it indicates unsatisfaction of our products. 
+	So this query should look at ALL return authorizations regardless of status. Here is a sample report:
+</p>
