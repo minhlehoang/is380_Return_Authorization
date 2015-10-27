@@ -70,3 +70,30 @@
 	The system updates the RA close date, quantity received, amount credited, and set the RA status to ‘C’losed.
 	Here is the sample screen shot:
 </p>
+
+<p>
+	SQL> start a:CloseRA.sql<br>
+	****** CLOSE a Return Authorization ******<br>
+	Today’s Date: 31-MAR-2014<br>
+	Enter RA Number: 1001<br>
+	RA Number: 1001<br>
+	RA Open Date: 22-MAR-2014<br>
+	Customer Number: 102<br>
+	Jones, Elaine<br>
+	123 Main Street<br>
+	Los Angeles, CA 91001<br>
+	(323) 511-1199<br>
+	Prod Number: P1<br>
+	Prod Description: Pencil<br>
+	Unit Price: $2.00<br>
+	Reason Code: 1<br>
+	Reason Description: Unsatisfied quality<br>
+	Quantity requested to return: 20<br>
+	Amount requested to return: $40.00<br>
+	Please enter actual return quantity: 18<br>
+	************************************<br>
+	***** Return Authorization --> 1001 is now Closed<br>
+	Date Closed: 31-MAR-2014<br>
+	Quantity Received: 18<br>
+	Amount Credited: $36.00
+</p>
