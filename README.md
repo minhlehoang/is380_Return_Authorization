@@ -134,6 +134,17 @@
 	The manager wants to know, how many RAs have been Opened for x number of days and have not been closed (this is typically called the “aging” report).
 	Here is a sample of the report. Please sort your report by the longest DaysOpen first.
 </p>
+<p>
+	SQL> start a:aging<br>
+	****** OPEN RA AGING Report ******<br>
+	Today’s Date: 10/28/2014<br>
+	Please enter number of days to query: 30<br>
+	RA RA Date Prod Product Request Unit Request Days<br>
+	Number Status Open Num Description Qty Price Amount Open<br>
+	------ ----- --------- ---- ----------- ------- ----- ---------- ------<br>
+	1008 O 4/11/2014 P1 Pencil 42 2.00 84.00 205<br>
+	1010 O 7/28/2014 P5 Eraser 15 3.00 45.00 92<br>
+</p>
 
 <h1 align="center">Program 5 - ByReason.sql</h1>
 <p>
@@ -145,12 +156,11 @@
 <p>
 	SQL> start a:byReason<br>
 	****** Return Product BY REASON Report ******<br>
-	Prod &nbsp&nbsp Product &nbsp&nbsp Reason &nbsp&nbsp Reason &nbsp&nbspNo of &nbsp&nbspTotal &nbsp&nbspTotal<br>
-	Num &nbsp&nbsp Description &nbsp&nbsp Code &nbsp&nbsp Description &nbsp&nbspReturns &nbsp&nbspQty &nbsp&nbspAmount<br>
-	------------------------------------------------------------------<br>
-	P1 Pencil 1 Unsatisfied quality 25 1,220 $2,440.00<br>
+	Prod &nbsp&nbspProduct Reason Reason No of Total Total<br>
+	Num &nbsp&nbspDescription Code Description Returns Qty Amount<br>
+	----- ----------- ------ --------------------- ------- ------- ---------<br>
+	P1 &nbsp&nbspPencil 1 Unsatisfied quality 25 1,220 $2,440.00<br>
 	P1 Pencil 2 Defective product 3 10 $ 20.00<br>
-	...<br>
 	P2 Pen 1 Unsatisfied quality 1 3 $ 4.50<br>
-	P2 Pen 5 Arrive too late 1 500 $ 750.00<br>
+	P2 Pen 5 Arrive too late 1 500 $ 750.00
 </p>
