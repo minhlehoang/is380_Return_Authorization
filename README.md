@@ -145,3 +145,22 @@ Number Status Open   Num   Description     Qty     Price   Amount   Open<br>
 1008 O 4/11/2014 P1 Pencil 42 2.00 84.00 205<br>
 1010 O 7/28/2014 P5 Eraser 15 3.00 45.00 92
 </p>
+
+
+****** OPEN RA AGING REPORT ******
+
+
+Today's Date:  12/15/2014                                                       
+Please enter number of days to query: 15
+
+    RA RA     Date       Prod Product     Request     Unit  Request Days        
+Number Status Open       Num  Description     Qty    Price   Amount Open        
+------ ------ ---------- ---- ----------- ------- -------- -------- ----        
+  1000 Open   11/25/2014 P1   Pencil 1          3     1.00     3.00   20        
+  1002 Open   11/25/2014 P1   Pencil 1          4     1.00     4.00   20        
+  1003 Open   11/25/2014 P3   Pencil 3          4     3.00    12.00   20        
+  1007 Open   11/30/2014 P3   Pencil 3          4     3.00    12.00   15        
+  1009 Open   11/30/2014 P3   Pencil 3          3     3.00     9.00   15        
+  1010 Open   11/30/2014 P4   Pencil 4          3     4.00    12.00   15        
+SQL> 
+SQL> spool off
