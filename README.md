@@ -97,3 +97,33 @@
 	Quantity Received: 18<br>
 	Amount Credited: $36.00
 </p>
+
+<h1>Program 3 - QueryRA.sql</h1>
+
+<p>
+	QueryRA.sql is a program to display details of the RA. In other words, the user enters the RA number, and details of the RA are displayed, like the following:
+</p>
+
+<p>
+	SQL> start a:queryra<br>
+	****** Return Authorization DETAIL Report ******<br>
+	Enter RA Number: 1001<br>
+	RA Number: 1001<br>
+	RA Status: Closed<br>
+	Customer Number: 102<br>
+	Jones, Elaine<br>
+	123 Main Street<br>
+	Los Angeles, CA 91001<br>
+	(323) 511-1199<br>
+	Prod Number: P1<br>
+	Prod Description: Pencil<br>
+	Unit Price: $2.00<br>
+	Reason Code: 1<br>
+	Reason Description: Unsatisfied quality<br>
+	RA Open Date: 22-MAR-2014<br>
+	RA close Date: 31-MAR-2014<br>
+	Quantity requested to return: 20<br>
+	Amount requested to return: $40.00<br>
+	Quantity received: 18<br>
+	Amount credited: $36.00
+</p>
