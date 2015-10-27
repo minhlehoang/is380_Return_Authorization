@@ -56,10 +56,10 @@
 </p>
 
 <p>
-	Note 1: Since the unit price may change over time, you need to store the unit price and amount credited information under each RA.
-	Note 2: At this moment, we trust the users to enter a valid reason code.
-	Note 3: To simplify the matter, the customer can only return one product at a time.
-	Note 4: The screen shots format are for your reference -- you do not need to count spaces or line spaces to match the screen shots, but you do need to display all information found on the screen shots with a similar appearance.
+	Note 1: Since the unit price may change over time, you need to store the unit price and amount credited information under each RA.<br>
+	Note 2: At this moment, we trust the users to enter a valid reason code.<br>
+	Note 3: To simplify the matter, the customer can only return one product at a time.<br>
+	Note 4: The screen shots format are for your reference -- you do not need to count spaces or line spaces to match the screen shots, but you do need to display all information found on the screen shots with a similar appearance.<br>
 </p>
 
 <h1>Program 2 - CloseRA.sql</h1>
