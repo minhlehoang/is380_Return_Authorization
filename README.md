@@ -186,12 +186,52 @@
 <p>
 	SQL> start a:byReason<br>
 	****** Return Product BY REASON Report ******<br>
-	Prod &nbsp&nbspProduct Reason Reason No of Total Total<br>
-	Num &nbsp&nbspDescription Code Description Returns Qty Amount<br>
-	----- ----------- ------ --------------------- ------- ------- ---------<br>
-	P1 &nbsp&nbspPencil 1 Unsatisfied quality 25 1,220 $2,440.00<br>
-	P1 Pencil 2 Defective product 3 10 $ 20.00<br>
-	P2 Pen 1 Unsatisfied quality 1 3 $ 4.50<br>
-	P2 Pen 5 Arrive too late 1 500 $ 750.00
+	<table>
+		<tr>
+			<th>Prod <br> Num</th>
+			<th>Product <br> Description</th>
+			<th>Reason <br> Code</th>
+			<th>Reason <br> Description</th>
+			<th>No of <br> Returns</th>
+			<th>Total <br> Qty</th>
+			<th>Total <br> Amount</th>
+		</tr>
+		<tr>
+			<td>P1</td>
+			<td>Pencil</td>
+			<td>1</td>
+			<td>Unsatisfied quality</td>
+			<td>25</td>
+			<td>1,220</td>
+			<td>$2,440.00</td>
+		</tr>
+		<tr>
+			<td>P1</td>
+			<td>Pencil</td>
+			<td>2</td>
+			<td>Defective product</td>
+			<td>3</td>
+			<td>10</td>
+			<td>$20.00</td>
+		</tr>
+		<tr>
+			<td>P2</td>
+			<td>Pen</td>
+			<td>1</td>
+			<td>Unsatisfied quality</td>
+			<td>1</td>
+			<td>3</td>
+			<td>$4.50</td>
+		</tr>
+		<tr>
+			<td>P2</td>
+			<td>Pen</td>
+			<td>5</td>
+			<td>Arrive too late</td>
+			<td>1</td>
+			<td>500</td>
+			<td>$750.00</td>
+		</tr>
+	</table>
 </p>
 
