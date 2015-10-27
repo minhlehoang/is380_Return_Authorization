@@ -15,7 +15,7 @@
 	In addition to the processing of returns and credits, our management also wants to know why customers return (by reason code), how many returns have not been closed, and so on an so forth.
 	Thing ‘n things have asked you to design a relational database (Entity Relationship Diagram and normalized tables) for the return process, and to complete the following five programs to process returns and produce reports for the management.
 </p>
-<h1>Program 1 - OpenRA.sql</h1>
+<h1 align="center">Program 1 - OpenRA.sql</h1>
 <p>
 	To open a return authorization (RA), the user would run the OpenRA.sql program. The system first prompts the greeting message and automatically displays today’s date. 
 	The system then prompts the user to enter the customer number. Customer name (last name first, comma, then first name), address and phone are displayed. The system then prompts for the product number. 
@@ -62,7 +62,7 @@
 	Note 4: The screen shots format are for your reference -- you do not need to count spaces or line spaces to match the screen shots, but you do need to display all information found on the screen shots with a similar appearance.<br>
 </p>
 
-<h1>Program 2 - CloseRA.sql</h1>
+<h1 align="center">Program 2 - CloseRA.sql</h1>
 <p>
 	The RA information is transmitted to the warehouse and the warehouse waits for the return to come in. The warehouse notifies us when the actual return is received. 
 	The user runs the CloseRA program to update this information to the system.
@@ -98,7 +98,7 @@
 	Amount Credited: $36.00
 </p>
 
-<h1>Program 3 - QueryRA.sql</h1>
+<h1 align="center">Program 3 - QueryRA.sql</h1>
 
 <p>
 	QueryRA.sql is a program to display details of the RA. In other words, the user enters the RA number, and details of the RA are displayed, like the following:
@@ -128,14 +128,14 @@
 	Amount credited: $36.00
 </p>
 
-<h1>Program 4 - Aging.sql</h1>
+<h1 align="center">Program 4 - Aging.sql</h1>
 <p>
 	Many RAs sit there open for a long time and the customers never bother to mail in the products. 
 	The manager wants to know, how many RAs have been Opened for x number of days and have not been closed (this is typically called the “aging” report).
 	Here is a sample of the report. Please sort your report by the longest DaysOpen first.
 </p>
 
-<h1>Program 5 - ByReason.sql</h1>
+<h1 align="center">Program 5 - ByReason.sql</h1>
 <p>
 	The management wants to know, for each product, what are the reasons for return.
 	By running the ByReason program, the manager can see for each product, each reason, the number of return authorization, total request quantity and total request amount of returns. 
